@@ -30,8 +30,10 @@ export class BgcolorDirective implements OnInit, AfterViewInit, OnDestroy {
     if (!this.elementRef) return;
 
     const element = this.elementRef.nativeElement as HTMLElement;
-    const child = element.children[0] as HTMLElement;
-    child.style.backgroundColor = color;
+    for (let i = 0; i < element.children.length; i++) {
+      const child = element.children[i] as HTMLElement;
+      child.style.backgroundColor = color;
+    }
   }
 
   ngOnDestroy(): void {

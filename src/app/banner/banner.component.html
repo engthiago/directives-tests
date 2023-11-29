@@ -1,1 +1,6 @@
-<p>banner works!</p>
+<div #content>
+  <ng-content></ng-content>
+</div>
+<div *ngIf="!content.children.length">
+  <span>I am default banner</span>
+</div>

@@ -1,10 +1,23 @@
-<app-banner [appBgcolor]="color" ></app-banner>
+<!-- <app-banner [appBgcolor]="color">
+  <div>Other banner</div>
+</app-banner>
 
-<button (click)="color = 'red'" >Change to red</button>
-<button (click)="color = 'blue'" >Change to blue</button>
+<button (click)="color = 'red'">Change to red</button>
+<button (click)="color = 'green'">Change to green</button>
+<button (click)="color = 'cyan'">Change to cyan</button> -->
 
-<!-- <app-banner *appAppearAfter="1000" [appBgcolor]="'red'"></app-banner>
+<!--
+<app-banner *appAppearAfter="1000" [appBgcolor]="'red'"></app-banner>
 <app-banner *appAppearAfter="1500" [appBgcolor]="'yellow'"></app-banner>
 <app-banner *appAppearAfter="2000" [appBgcolor]="'cyan'"></app-banner>
-<app-banner *appAppearAfter="2500; dissolveAfter: 100" [appBgcolor]="'cyan'" ></app-banner>
- -->
+<app-banner *appAppearAfter="2500; dissolveAfter: 100" [appBgcolor]="'cyan'" ></app-banner> -->
+
+
+<app-banner *appAppearAfter="1000; dissolveAfter: 4000; let appAppearAfter; let dissolveAfter=dissolveAfter; let guid=guid" [appBgcolor]="'red'">
+  <div>Thiago: appeared: {{appAppearAfter}}, dissolved: {{dissolveAfter}}; guid: {{guid}}</div>
+</app-banner>
+
+<app-banner *appAppearAfter="2600; dissolveAfter: 4000; let appAppearAfter; let dissolveAfter=dissolveAfter; let guid=guid" [appBgcolor]="'cyan'">
+  <div>Chico: appeared: {{appAppearAfter}}, dissolved: {{dissolveAfter}}; guid: {{guid}}</div>
+</app-banner>
+
